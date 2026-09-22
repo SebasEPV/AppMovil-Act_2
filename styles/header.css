@@ -1,0 +1,60 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #e5e7eb;
+  background: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+header {
+  width: 100%;
+  background: #111827;
+  border-bottom: 1px solid #374151;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.header-container {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav a {
+  color: #9ca3af;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #fff;
+}
