@@ -9,11 +9,11 @@
 body {
   min-height: 100vh;
   margin: 0;
-  display: grid;
-  align-items: end;
+  display: flex;
+  flex-direction: column;
 }
 
-footer {
+header, footer {
   width: min(100%, 1100px);
   margin: 0 auto;
   padding: 1.5rem 2rem;
@@ -21,6 +21,13 @@ footer {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+
+header {
+  border-bottom: 1px solid #374151;
+}
+
+footer {
   border-top: 1px solid #374151;
 }
 
@@ -42,6 +49,50 @@ nav a:hover, nav a:focus-visible { color: #fff; }
 
 small { color: #6b7280; }
 
+main {
+  width: min(100%, 1100px);
+  margin: auto;
+  padding: 6rem 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: #60a5fa;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+h1 {
+  max-width: 700px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  letter-spacing: -.06em;
+  line-height: .95;
+}
+
+.intro {
+  max-width: 520px;
+  margin: 1.75rem 0 2rem;
+  color: #9ca3af;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  padding: .85rem 1.2rem;
+  border-radius: .4rem;
+  background: #fff;
+  color: #111827;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:hover, .button:focus-visible { background: #dbeafe; }
+
 @media (max-width: 600px) {
-  footer { align-items: flex-start; flex-direction: column; }
+  header, footer { align-items: flex-start; flex-direction: column; }
+  main { padding: 4rem 2rem; }
 }
